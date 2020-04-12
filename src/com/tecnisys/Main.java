@@ -62,7 +62,6 @@ public class Main {
                     g.drawImage(imagemFundo(),0, 0, 890, 480, null);
                 }
             };
-            mostrarFunc = new JButton();
             mostrarFunc.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -112,13 +111,18 @@ public class Main {
             comboAno.setModel(new DefaultComboBoxModel(new Integer[]{Integer.valueOf("2020"),Integer.valueOf("2021"),
                     Integer.valueOf("2022"), Integer.valueOf("2023"), Integer.valueOf("2024")}));
 
+            calculadoraTela.add(mostrarFunc);
+            calculadoraTela.add(gerarCalc);
+            calculadoraTela.add(salValor);
+            calculadoraTela.add(comboMeses);
+            calculadoraTela.add(comboAno);
         }
 
 
         private Image imagemFundo(){
             Image imagem = null;
             try{
-                imagem = ImageIO.read(new File("C:\\Users\\Nayara\\Desktop\\image.gif"));
+                imagem = ImageIO.read(new File("/home/gabriel/Desktop/unnamed.gif"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
