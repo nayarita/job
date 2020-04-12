@@ -122,7 +122,7 @@ public class Main {
         private Image imagemFundo(){
             Image imagem = null;
             try{
-                imagem = ImageIO.read(new File("/home/gabriel/Desktop/unnamed.gif"));
+                imagem = ImageIO.read(new File("unnamed.gif"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
